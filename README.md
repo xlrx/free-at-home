@@ -22,7 +22,7 @@ Custom Interface / API for the Busch Jäger free@home system (home automation).
 
 
 # Prerequisites
-- Node.js 5.5 (tested, earlier and later versions might work; 9.3 is currently being successfully tested so far)
+- Node.js 5.5 (tested, earlier and later versions might work; 10.7 is currently being successfully tested so far)
 
 The following Node.js modules:
 - body-parser
@@ -68,7 +68,7 @@ When the software is running, you can call into the REST API using a browser. Fo
 http://yourLocalIP:8080/set/switch/ABB123456789/ch0000/on
 ABB123456789 is the serial number of the actuator you're trying to control.
 
-To see all data from an actuator use the following URL:
+To see all data from an actuator use the following URL (you can set a custom port number other than 8080 via the config.js):
 http://yourLocalIP:8080/info/ABB123456789/
 
 An overview of all available commands can be found in the [REST API](lib/api/webapi.js) and the [SysAP API (parse function)](lib/freeathome/sysap-external.js)
